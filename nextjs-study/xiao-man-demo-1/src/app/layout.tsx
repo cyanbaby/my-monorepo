@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {home}
         {about}
-        <Link  className="text-blue-500 block" href="/setting">About Setting</Link>
+        <Link  className="text-blue-500 block" href="/setting">点击跳转 About Setting</Link>
         {children}
       </body>
     </html>

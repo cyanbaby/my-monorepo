@@ -1,3 +1,3 @@
 export default function AboutSetting() {
-  return <div>About Setting</div>;
+  return <div>@about/Setting Page</div>;
 }
