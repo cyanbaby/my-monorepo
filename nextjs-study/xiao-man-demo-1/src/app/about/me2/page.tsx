@@ -1,3 +1,8 @@
+'use client';
+import { useSearchParams } from "next/navigation";
+
 export default function Me() {
-  return <div>About / Me 2</div>;
+  const searchParams = useSearchParams();
+  const id = searchParams.get('id');
+  return <div>About / Me 2{id}</div>;
 }
