@@ -1,11 +1,17 @@
-import Link from "next/link";
+'use client';
+
+import { useRouter } from "next/navigation";
 
 export default function About() {
+  const router = useRouter();
   return (
     <div className="h-500">
       <h1>About</h1>
-      <Link replace scroll={false} prefetch={false} className="text-blue-500 block mt-60" href={ { pathname: '/about/me', query: { id: '张三' } } }>about/me</Link>
-      <Link className="text-blue-500 block" href={ { pathname: '/about/me2', query: { id: '李四'} } }>about/me2</Link>
+        <button className="block text-blue-500" onClick={() => router.replace("/page")}>替换当前页面</button>
+        <button className="block text-blue-500" onClick={() => router.back()}>返回上一页</button>
+        <button className="block text-blue-500" onClick={() => router.forward()}>跳转下一页</button>
+        <button className="block text-blue-500" onClick={() => router.refresh()}>刷新当前页面</button>
+        <button className="block text-blue-500" onClick={() => router.prefetch("/about")}>预获取about页面</button>
     </div>
   );
 }
